@@ -383,7 +383,7 @@ jobs:
   electron-gn-linux-x64-debug-fyi:
     environment:
       DISPLAY: ':99.0'
-      GN_CONFIG: //electron/build/args/debug.gn
+      GN_CONFIG: //electron/build/args/testing.gn
     docker:
       - image: electronbuilds/electron:0.0.8
     resource_class: 2xlarge
@@ -401,7 +401,7 @@ jobs:
   electron-gn-linux-ia32-debug-fyi:
     environment:
       DISPLAY: ':99.0'
-      GN_CONFIG: //electron/build/args/debug.gn
+      GN_CONFIG: //electron/build/args/testing.gn
       GN_EXTRA_ARGS: 'target_cpu = "x86"'
       NPM_CONFIG_ARCH: ia32
     docker:

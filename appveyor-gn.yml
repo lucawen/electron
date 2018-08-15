@@ -8,7 +8,7 @@ environment:
   DISABLE_CRASH_REPORTER_TESTS: true
   ELECTRON_ENABLE_LOGGING: true
   matrix:
-    - gn_args: debug
+    - gn_args: testing
       ELECTRON_SKIP_NATIVE_MODULE_TESTS: 1
     - gn_args: release
 platform:
