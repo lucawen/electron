@@ -22,13 +22,9 @@ const versionType = args._[0]
 
 if (!versionType && !args.notesOnly) {
   console.log(`Usage: prepare-release versionType [major | minor | patch | beta | nightly]` +
-     ` (--stable) (--notesOnly) (--automaticRelease) (--branch) (--nightly)`)
+     ` (--stable) (--notesOnly) (--automaticRelease) (--branch)`)
   process.exit(1)
 }
-
-(async () => {
-  console.log(await determineNextNightly(await getCurrentBranch()))
-})()
 
 const github = new GitHub()
 const gitDir = path.resolve(__dirname, '..')

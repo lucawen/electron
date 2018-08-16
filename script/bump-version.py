@@ -203,8 +203,8 @@ def tag_version(version, suffix):
     'git',
     'commit',
     '-a',
-    '-m', 
-    'Bump v{0}'.format(version + suffix), 
+    '-m',
+    'Bump v{0}'.format(version + suffix),
     '-n'
   ])
 
